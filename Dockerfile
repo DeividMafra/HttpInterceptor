@@ -1,4 +1,4 @@
- Create the node stage with the name "builder"
+# Create the node stage with the name "builder"
 FROM node:latest as builder
 
 # Set the working directory

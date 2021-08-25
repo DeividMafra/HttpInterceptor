@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'httpInterceptor';
+
+  constructor(private httpClient: HttpClient){}
+
+  ngOnInit(){
+    this.httpClient.get("http://localhost:3000/products").subscribe(
+      data => {
+        console.log(data)
+      }
+    )
+  }
 }
+
